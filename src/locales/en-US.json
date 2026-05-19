@@ -126,6 +126,10 @@
       "description": "Display the calendar view in the right sidebar",
       "buttonText": "Open"
     },
+    "autoOpenView": {
+      "name": "Auto open on startup",
+      "description": "Automatically open the calendar view in the right sidebar when Obsidian starts"
+    },
     "refreshPlugin": {
       "name": "Refresh plugin",
       "description": "Refresh the calendar view to apply latest settings",

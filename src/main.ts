@@ -46,7 +46,9 @@ export default class CalendarZ extends Plugin {
 		this.addSettingTab(new CalendarZSettingTab(this.app, this));
 
 		this.app.workspace.onLayoutReady(async () => {
-			await this.activateView();
+			if (this.settings.autoOpenView) {
+				await this.activateView();
+			}
 			this.forEachView(v => {
 				v.refreshStatsOnly().catch(error => {
 					console.error("Failed to refresh stats:", error);

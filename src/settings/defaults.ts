@@ -35,4 +35,5 @@ export const DEFAULT_SETTINGS: CalendarZSettings = {
 	yearNoteFolder: "",
 	yearNoteFormat: "YYYY",
 	hideCompletedTodos: false,
+	autoOpenView: true,
 };

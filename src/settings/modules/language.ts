@@ -1,8 +1,8 @@
 import type { PluginLike } from "../../core/types";
 import type { Language } from "../../core/types";
 import { SettingGroup } from "../ui/SettingGroup";
-import { DropdownSettingRenderer, ButtonSettingRenderer } from "../ui/SettingRenderer";
-import { ts } from "../settingUtils";
+import { DropdownSettingRenderer, ButtonSettingRenderer, ToggleSettingRenderer } from "../ui/SettingRenderer";
+import { ts, createSettingHandler } from "../settingUtils";
 
 /**
  * Renders language settings.
@@ -47,6 +47,19 @@ export function renderLanguageSettings(
 		description: ts(plugin, "openCalendar", "description"),
 		buttonText: ts(plugin, "openCalendar", "buttonText"),
 		onClick: () => void plugin.activateView(),
+	});
+
+	// Auto open calendar view on startup toggle
+	const autoOpenViewRenderer = new ToggleSettingRenderer(plugin);
+	autoOpenViewRenderer.render(contentEl, {
+		name: ts(plugin, "autoOpenView", "name"),
+		description: ts(plugin, "autoOpenView", "description"),
+		value: plugin.settings.autoOpenView,
+		onChange: createSettingHandler({
+			plugin,
+			settingKey: "autoOpenView",
+			refreshDisplay,
+		}),
 	});
 
 	// Refresh plugin button
