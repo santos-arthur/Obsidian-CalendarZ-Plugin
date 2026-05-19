@@ -89,4 +89,6 @@ export interface CalendarZSettings {
 	yearNoteFormat: string;
 	/** Whether to hide todo dots for completed todos */
 	hideCompletedTodos: boolean;
+	/** Whether to automatically open the calendar view when Obsidian starts */
+	autoOpenView: boolean;
 }

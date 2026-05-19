@@ -126,6 +126,10 @@
       "description": "在右侧边栏显示日历视图",
       "buttonText": "打开"
     },
+    "autoOpenView": {
+      "name": "启动时自动打开",
+      "description": "启动 Obsidian 时自动在右侧边栏打开日历视图"
+    },
     "refreshPlugin": {
       "name": "刷新插件",
       "description": "刷新日历视图以应用最新设置",

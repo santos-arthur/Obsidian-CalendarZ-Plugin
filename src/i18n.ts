@@ -176,6 +176,11 @@ export interface I18n {
 			description: string;
 			buttonText: string;
 		};
+		/** Auto open calendar view on startup setting strings */
+		autoOpenView: {
+			name: string;
+			description: string;
+		};
 		/** Refresh plugin button setting strings */
 		refreshPlugin: {
 			name: string;
